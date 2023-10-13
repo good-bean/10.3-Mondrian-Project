@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    :root {
+      --gap-clr: #000;
+      --white: #f0f1ec;
+      --red: #e72f24;
+      --black: #232629;
+      --blue: #004592;
+      --yellow: #f9d01e;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid-container {
+      width: 748px;
+      height: 748px;
+      background-color: var(--gap-clr);
+      display: grid;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      gap: 9px;
+    }
+
+    .red {
+      background-color: var(--red);
+      grid-column: 1 / 2;
+    }
+
+    .blue {
+      background-color: var(--blue);
+      grid-column: 4 / -1;
+      border-bottom: 10px solid #000;
+    }
+
+    .yellow {
+      background-color: var(--yellow);
+    }
+
+    .black {
+      background-color: var(--black);
+    }
+
+    .white__top-right,
+    .white__middle-left,
+    .white__middle-middle,
+    .white__middle-bottom-right,
+    .white__bottom-left {
+      background-color: var(--white);
+    }
+
+    .white__top-right {
+      grid-column: span 3;
+    }
+
+    .white__middle-left {
+      grid-row: span 2;
+    }
+
+    .white__middle-middle {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .white__middle-bottom-right {
+      grid-column: 4 / -1;
+      grid-row: 3 / -1;
+    }
+
+    .white__bottom-left {
+      grid-column: 1 / 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="red"></div>
+    <div class="white__top-right"></div>
+    <div class="white__middle-left"></div>
+    <div class="white__middle-middle"></div>
+    <div class="blue"></div>
+    <div class="white__middle-bottom-right"></div>
+    <div class="white__bottom-left"></div>
+    <div class="yellow"></div>
+    <div class="black"></div>
+  </div>
+</body>
+
+</html>
